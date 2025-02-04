@@ -1,0 +1,5 @@
+x = 12
+if x > 9 :
+  print("The if statement was evaluated as True")
+ 
+
