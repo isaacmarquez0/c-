@@ -1,0 +1,12 @@
+x = input("Enter a number > ")
+# Adding to convert a type 'str' to type 'int'
+x = int(x)
+y = 8
+
+
+if x >= y :
+  print(x, "is equal to or greater than", y)
+else :
+  print(x, "is less than", y)
+
+print('Done')
