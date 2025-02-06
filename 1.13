@@ -1,0 +1,8 @@
+x = ord("z")
+
+print(x)
+
+x = chr(69)
+x = chr(420)
+
+print(x)
