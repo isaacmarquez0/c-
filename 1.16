@@ -1,0 +1,9 @@
+#The try block will generate an error, because x is not defined:
+
+try:
+  print(x)
+except:
+  print("Trying hard now Its so hard now Trying hard now")
+  print("Oh hes ready Gonna make a move yeah Oh hes ready And makin moves yeah Yeah yeah")
+  print("Getting strong now Wont be long now Getting strong now")
+  print("Gonna fly now Flying high now Gonna fly fly")
