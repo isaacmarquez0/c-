@@ -1,0 +1,31 @@
+# Python TUPLES Lab1
+print('''
+Python Tuples - Introduction 
+Like Lists, Tuples are comma delimited groups 
+of variables
+- Tuples are Immutable, which means you can't 
+  change the values after they are created.
+- Like Lists, you can Index Tuples.
+
+Challenge #1
+Run the code
+- Can you explain the difference between a 
+  List data structure and a Tuple data structure? 
+- Read each line of code and explain how Indexing 
+  work on both Lists and Tuples, then how assignments 
+  work on Lists, but not on Tuples      
+   ''')
+my_list = [1, 2, "Cheese", 'and', 4]
+my_tuple = (1,2,"Cheese", '&', 'Pickles')
+print(my_list)
+print(my_list[1])
+print(my_list[2])
+print(my_tuple)
+print(my_tuple[1])
+print(my_tuple[2])
+my_list[0] = 5
+my_list[4] = "Crackers"
+print(my_list)
+my_tuple = (1,2,"Cheese", '&', "Crackers",)
+
+print(my_tuple)
