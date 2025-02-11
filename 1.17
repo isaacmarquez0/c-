@@ -1,0 +1,12 @@
+known limitations
+1	def sum_and_avg(x, y, z):
+2	    s = x + y + z
+3	    a = s/3
+4	    return(s, a)
+5	    
+6	def main():    
+7	    (S, A) = sum_and_avg(3, 8, 5)
+8	    print('Sum =', S)
+9	    print('Avg =', A)
+10	
+11	main()
