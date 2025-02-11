@@ -1,0 +1,41 @@
+#
+animal_types=['Elephant', 'Rhinoceros', 'Lion','Water Buffalo','Leopard','Giraffe','Gnu','Thompson Gazelle','Dik Dik','Zebra','Baboon','Hyena','Hippopotamus','Crocodile','Ostrich','Wild Dog','WartHog','Vulture']
+
+short_animal_tuple = ('Baboon', 'Gnu', 'WartHog', 'Gnu', 'Vulture', 'Gnu', 'Gnu', 'Gnu', 'Zebra', 'WartHog', 'Zebra', 'Zebra', 'Leopard', 'Gnu', 'Gnu', 'Elephant', 'Gnu',)
+#print(short_animal_list)
+#print(medium_animal_list)
+#print(long_animal_list)
+
+# 1) Pick an animal from the 'animal_types' list and create a  
+# for loop to count how many there are in the 'short_animal_tuple'.
+# Then change from the 'short' animal tuple to the 'medium' 
+# and 'long' tuple, and count that animal in these Tuple sets.
+
+# 2) After the for loop to find a single animal works, 
+# Look at the 'animal_types' list and wrap another for loop
+# around the for loop from the code above, and count the number
+# of # each animal from the short, medium, and long tuples
+
+elephant_count = 0
+lion_count = 0
+gnu_count = 0
+Water_Buffalo_count = 0
+for animal in short_animal_tuple:
+    print(animal)
+    if animal == 'elephants':
+       elephants_count += 1 
+    if animal == 'Lions':
+       lion_count += 1
+    if animal == "Gnu":
+       gnu_count += 1   
+    if animal == "Water_Buffalo":
+       gnu_count += 1   
+# Example Output
+print('Animal Count')
+print('Water_Buffalo',Water_Buffalo_count)
+print('Elephants = ',elephant_count)
+print('Lions = ',lion_count)
+print("Gnu = ",gnu_count)
+# --- Delete Lines 24-32 and enter your code below
+#-------------------------------
+# ---- Enter Your Code Here ----
