@@ -1,0 +1,19 @@
+print('''Challenge #2
+Slice some index ranges 
+
+# from my_list, slice elements beginning with 0th, up to but not including the 4th, and assign it to a new_list, then print the new list
+
+# from my_list, slice elements from -4 to -2 and assign it to a new_list2, then print the new list2  
+      
+# Enter Your Code Here:
+      ''')
+
+my_list = ['B','a','b','y','l','o','n','_','5']
+
+# elements beginning with 0th, up to but not including the 4th
+new_list = my_list[:4]
+print(new_list)
+
+# elements from -4 up to -2
+new_list2 = my_list[-4:-2]
+print(new_list2)
