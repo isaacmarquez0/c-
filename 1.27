@@ -1,0 +1,13 @@
+print('''Challenge #3
+replace indexed values 
+
+# change index[1] to 'pineapple'
+      
+# Enter Your Code Here:
+      ''')
+my_list = ["apple", "orange", "pomegranate"]
+print(my_list)
+
+# change index[1] to 'pineapple'
+my_list[1] = "pineapple"
+print(my_list)
