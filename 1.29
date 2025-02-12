@@ -1,0 +1,35 @@
+# Using an IF/ELSE write a program to have a hard coded variable <user_guess> 
+# compared to a hard coded variable <number_2_guess> and print the results.
+# You will use this source code in the next few program labs
+print('Write a program to compare 2 hard coded numbers with an IF/ELSE')
+
+# -------------------------------------------
+# This program compares a user's hardcoded guess to a predefined number.
+# It provides feedback on whether the guess is correct or not.
+#     guess-01-YourFirstName-YourLastName.py
+# -------------------------------------------
+
+# Displaying instructions to the user
+print("This program will compare a hardcoded user guess with a predefined number.")
+
+# Defining the number to guess
+number_2_guess = 7
+print("The number to guess is:", number_2_guess)
+
+# Hardcoded user guess
+user_guess = 5
+
+# Printing type and value of user_guess
+print("The type of user_guess is:", type(user_guess))
+print("The user's guess is:", user_guess)
+
+# Comparing user_guess with number_2_guess
+if user_guess == number_2_guess:
+    print("Good Guess, you are a Winner!")
+    print(f"{user_guess} is equal to {number_2_guess}")
+else:
+    print("Better Luck Next Time")
+    print(f"{user_guess} is NOT equal to {number_2_guess}")
+
+# Ending message
+print("All Done!")
