@@ -1,0 +1,43 @@
+# Python Manipulating Lists
+# Change the title/name of this Replit, so it is in your named Replit Directory
+
+print('''
+Manipulating Lists by slicing them
+
+Change the title/name of this Replit, so it is in your 
+named Replit Directory
+
+Challenge #1
+      ''')
+# Slicing a list to extract specific elements
+my_string = 'Babylon_5'
+my_list = ['B','a','b','y','l','o','n','_','5']
+print(my_string)
+print(my_list)
+
+print('''Print some index ranges 
+Remember that you start index at '0', so you 
+have the 0th, 1st, 2nd, 3rd... index values
+Print the following:
+# 3rd to 5th (not including the 6th)
+# beginning up to but not including the 4th
+# 6th to end
+# beginning to end      
+      
+# Enter Your Code Here:
+      ''')
+# 3rd to 5th (not including the 6th)
+x = my_list[3:6]
+print(x)
+
+# beginning up to but not including the 4th
+y = my_list[:4]
+print(y)
+
+# 6th to end
+z = my_list[6:]
+print(z)
+
+# beginning to end
+full_list = my_list[:]
+print(full_list)
