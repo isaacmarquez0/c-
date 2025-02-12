@@ -1,0 +1,92 @@
+print('''Functions - Passing Arguments
+Learn more about Functions here:
+https://www.w3schools.com/python/python_functions.asp
+''')      
+print('''
+Challenge #1
+Run this code
+Run, then Edit the code in the template example:
+      
+Can you follow and explain
+- How arguments are passed from the main code to the function?
+- Can you explain how a value is 'returned'
+      ''')
+print('''
+----------------------------------------------------
+''')
+
+def my_math(x, y):
+    z = x + y
+    return z
+
+def main():
+    my_num_1 = 5
+    my_num_2 = 2
+    sum_result = my_math(my_num_1, my_num_2)
+    print("The sum of", my_num_1, "+", my_num_2, "=", sum_result)
+
+main()
+print('''
+----------------------------------------------------
+''')
+
+print('''
+Challenge #2
+Create a function that multiplies 2 numbers and returns the result
+----------------------------------------------------      ''')
+# Solution:
+def multiply(x, y):
+    return x * y
+
+print("Multiplication Result:", multiply(3, 4))
+
+print('''
+----------------------------------------------------
+''')
+
+print('''
+Challenge #3
+Create a function that adds 2 numbers and if the result is odd, adds 1, then returns the result
+----------------------------------------------------      ''')
+# Solution:
+def add_and_adjust(x, y):
+    result = x + y
+    if result % 2 != 0:
+        result += 1
+    return result
+
+print("Adjusted Sum:", add_and_adjust(3, 4))
+print("Adjusted Sum:", add_and_adjust(2, 2))
+
+print('''
+----------------------------------------------------
+''')
+
+print('''
+Challenge #4
+Create a single function that takes the 2 argument numbers x, y 
+and a 3rd argument, that selects between Addition, Subtraction, 
+Multiplication, and Division, with the default being Addition. 
+Then returns the result
+----------------------------------------------------      ''')
+# Solution:
+def calculator(x, y, operation="add"):
+    if operation == "add":
+        return x + y
+    elif operation == "subtract":
+        return x - y
+    elif operation == "multiply":
+        return x * y
+    elif operation == "divide":
+        return x / y if y != 0 else "Cannot divide by zero"
+    else:
+        return "Invalid operation"
+
+print("Addition:", calculator(6, 3))
+print("Subtraction:", calculator(6, 3, "subtract"))
+print("Multiplication:", calculator(6, 3, "multiply"))
+print("Division:", calculator(6, 3, "divide"))
+
+print('''
+----------------------------------------------------
+''')
