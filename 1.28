@@ -1,0 +1,16 @@
+# this is my number guessing program
+print('This is a Guessing Game')
+print("Ready to play?")
+
+# Add more code here
+number_2_guess = 5
+user_guess = 7  # Change this to test different values
+
+# 1) use an IF statement to check if 
+#    number_2_guess = user_guess
+if number_2_guess == user_guess:
+    # 2) print if they are
+    print("Congratulations! You guessed the correct number.")
+else:
+    # 3) use ELSE to print if they are not
+    print("Sorry, that's not the correct number. Try again!")
