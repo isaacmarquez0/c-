@@ -1,0 +1,21 @@
+print('This is a Guessing Game')
+print("Ready to play?")
+
+# Add more code here
+import random
+
+def guessing_game():
+    secret_number = random.randint(1, 10)
+    user_guess = input("Guess a number between 1 and 10: ")
+    
+    try:
+        user_guess = int(user_guess)
+    except ValueError:
+        print(f"{user_guess} is not a number. Next time enter a number")
+    else:
+        if user_guess == secret_number:
+            print("Congratulations! You guessed the right number.")
+        else:
+            print(f"Sorry, the correct number was {secret_number}.")
+
+guessing_game()
