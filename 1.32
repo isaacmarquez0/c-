@@ -1,0 +1,27 @@
+# this is my number guessing program
+print('This is a Guessing Game')
+print("Ready to play?")
+
+# Define the number to guess
+number_2_guess = 5
+
+# Hardcoded user guess
+user_guess = 7  # Change this value to test different outcomes
+
+# Print the user's guess and its type
+print("Your guess:", user_guess)
+print("Type of your guess:", type(user_guess))
+
+# Print the correct number
+print("The correct number to guess:", number_2_guess)
+
+# Check if the guess is correct
+if user_guess == number_2_guess:
+    print("Good Guess, you are a Winner")
+    print(f"{user_guess} is equal to {number_2_guess}")
+else:
+    print("Better Luck Next Time")
+    print(f"{user_guess} is NOT equal to {number_2_guess}")
+
+# End message
+print("All Done!")
