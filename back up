@@ -1,0 +1,42 @@
+from gpiozero import PWMLED
+from gpiozero import LED
+import time
+
+# Debug Settings
+debug_messages = 1  # Print debug messages if 1, else silence
+
+# Raspberry Pi Pins for Traffic Lights and Eyes
+r_red_pwm_pin = PWMLED(13)
+r_green_pwm_pin = PWMLED(15)
+r_blue_pwm_pin = PWMLED(18)
+l_red_pwm_pin = PWMLED(27)
+l_green_pwm_pin = PWMLED(22)
+l_blue_pwm_pin = PWMLED(23)
+red_led, yellow_led, green_led = LED(3), LED(4), LED(17)
+
+# Function to control the traffic light
+def stop_light(traffic):
+    if debug_messages: print(f"Traffic Light: {traffic}")
+    red_led.value, yellow_led.value, green_led.value = traffic['red_LED'], traffic['yellow_LED'], traffic['green_LED']
+
+# Function to control the RGB eyes
+def eyes_RGB(eyes):
+    if debug_messages: print(f"Eyes RGB: {eyes}")
+    left_eye, right_eye = eyes
+    l_red_pwm_pin.value, l_green_pwm_pin.value, l_blue_pwm_pin.value = left_eye['leye_red_RGBLED'], left_eye['leye_green_RGBLED'], left_eye['leye_blue_RGBLED']
+    r_red_pwm_pin.value, r_green_pwm_pin.value, r_blue_pwm_pin.value = right_eye['reye_red_RGBLED'], right_eye['reye_green_RGBLED'], right_eye['reye_blue_RGBLED']
+
+# Function to get the robot's feature data
+def get_robot_feature_data():
+    return {'red_LED': 1, 'yellow_LED': 0, 'green_LED': 0}, {'reye_red_RGBLED': 1, 'reye_green_RGBLED': 0.5, 'reye_blue_RGBLED': 0.99}, {'leye_red_RGBLED': 0.44, 'leye_green_RGBLED': 0.5, 'leye_blue_RGBLED': 0.99}
+
+def main():
+    print("Welcome to the STEAM Clown Makey Bot")
+    stop_light_LEDs, left_RGB, right_RGB = get_robot_feature_data()
+
+    if debug_messages: print("Setting stop light and eyes RGB")
+    stop_light(stop_light_LEDs)
+    eyes_RGB([left_RGB, right_RGB])
+
+if __name__ == "__main__":
+    main()
