@@ -1,0 +1,54 @@
+# Challenge #4 and #5
+
+# Function to perform math operation
+def my_math(x, y, operation="addition"):
+    if operation == "addition":
+        result = x + y
+        operation_symbol = "+"
+    elif operation == "subtraction":
+        result = x - y
+        operation_symbol = "-"
+    elif operation == "multiplication":
+        result = x * y
+        operation_symbol = "*"
+    elif operation == "division":
+        if y == 0:
+            return "Error: Cannot divide by zero"
+        result = x / y
+        operation_symbol = "/"
+    else:
+        return "Invalid operation"
+    
+    # Return result and operation as a string
+    return f"{x} {operation_symbol} {y} = {result}"
+
+# Main function
+def main():
+    while True:
+        try:
+            # Get input from user
+            my_num_1 = float(input("Enter the first number (x): "))
+            my_num_2 = float(input("Enter the second number (y): "))
+            
+            # Ask for the operation type
+            operation = input("Enter operation (addition, subtraction, multiplication, division) [default is addition]: ").lower().strip()
+            
+            # If operation is empty, default to addition
+            if not operation:
+                operation = "addition"
+            
+            # Call the function with the operation
+            result = my_math(my_num_1, my_num_2, operation)
+            
+            # Print the result
+            print(result)
+            
+            # Exit after successful calculation
+            break
+        except ValueError:
+            print("Error: Please enter valid numbers for x and y.")
+        except Exception as e:
+            print(f"An unexpected error occurred: {e}")
+
+# Call the main function to run the program
+main()
