@@ -1,0 +1,18 @@
+# Function definition
+def greet(lang):
+    if lang == 'es':
+        return 'Hola'  # Return 'Hola' if the language is Spanish ('es')
+    elif lang == 'fr':
+        return 'Bonjour'  # Return 'Bonjour' if the language is French ('fr')
+    else:
+        return 'Hello'  # Return 'Hello' for any other language
+
+# Main function
+def main():
+    # Passing arguments to the greet function and printing the result
+    print(greet('en'), 'Glenn')  # 'en' (English) is passed to greet() and returns 'Hello'
+    print(greet('fr'), 'Sabine')  # 'fr' (French) is passed to greet() and returns 'Bonjour'
+    print(greet('es'), 'Carlos')  # 'es' (Spanish) is passed to greet() and returns 'Hola'
+    
+# Calling the main function
+main()
