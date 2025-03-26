@@ -1,0 +1,30 @@
+# Ask the user for an integer number between 0 and 9
+while True:
+    try:
+        user_input = int(input("Please enter an integer between 0 and 9: "))
+        
+        # Validate that the user input is between 0 and 9
+        if 0 <= user_input <= 9:
+            break  # Exit the loop if the input is valid
+        else:
+            print("Please enter a number between 0 and 9.")
+    except ValueError:
+        print("Invalid input! Please enter an integer number.")
+
+# Print the user input
+print("User Input:", user_input)
+
+# Now let's use a while loop to compare the user input to the count variable
+print("Starting While Loop - Comparing User & Count Variable")
+
+count = 0
+while count <= 9:
+    print(count)
+    
+    # Check if the user input matches the count variable
+    if user_input == count:
+        print(f"The User variable is equal to the count variable.\nUser = {user_input} Count = {count}")
+    
+    count += 1
+
+print("End Code Challenge")
