@@ -1,0 +1,17 @@
+# this is my number guessing program
+print('This is a Guessing Game')
+print("Ready to play?")
+
+# Secret number to guess
+number_2_guess = 7
+
+# Get user input and convert it to an integer
+user_guess = int(input("Guess a number between 1 and 10: "))
+
+if user_guess == number_2_guess:
+    print("Congratulations! You guessed the number!")
+elif user_guess == number_2_guess + 1 or user_guess == number_2_guess - 1:
+    print("Close but no Cigar")
+    print(user_guess, "is one number away from", number_2_guess)
+else:
+    print("Sorry, that's not the number.")
