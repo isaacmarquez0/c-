@@ -1,0 +1,44 @@
+# Example using built-in Python functions
+
+# Function 1: print()
+print("Welcome to the Python Built-in Functions Lab!")
+
+# Function 2: input()
+name = input("What is your name? ")
+print(f"Hello, {name}!")
+
+# Function 3: int()
+age = input("How old are you? ")
+age = int(age)  # Convert input string to integer
+print(f"Your age is {age} years old.")
+
+# Function 4: type()
+print("The type of 'age' is:", type(age))  # Check the type of the variable
+
+# Function 5: abs()
+negative_number = -25
+positive_number = abs(negative_number)  # Get the absolute value
+print(f"The absolute value of {negative_number} is {positive_number}.")
+
+# Function 6: len()
+sentence = "Python is awesome!"
+sentence_length = len(sentence)  # Get the length of the string
+print(f"The length of the sentence '{sentence}' is {sentence_length} characters.")
+
+# Function 7: round()
+pi_value = 3.14159
+rounded_value = round(pi_value, 2)  # Round the number to 2 decimal places
+print(f"The rounded value of pi is {rounded_value}.")
+
+# Function 8: max() - Find the largest number in a list
+numbers = [10, 25, 5, 30, 50]
+largest_number = max(numbers)  # Find the largest number
+print(f"The largest number in the list is {largest_number}.")
+
+# Function 9: min() - Find the smallest number in a list
+smallest_number = min(numbers)  # Find the smallest number
+print(f"The smallest number in the list is {smallest_number}.")
+
+# Function 10: sum() - Calculate the sum of numbers in a list
+total = sum(numbers)  # Calculate the sum of the list
+print(f"The total sum of the list is {total}.")
