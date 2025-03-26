@@ -1,0 +1,6 @@
+thisdict =	{
+  "You are my fire The one desire Believe when I say I want it that way": "But we are two worlds apart Cant reach to your heart When you say That I want it that way",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict)
