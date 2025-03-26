@@ -1,0 +1,32 @@
+# Ask user for an integer number greater than 20
+while True:
+    try:
+        user_number = float(input("Enter an integer number 20 or greater: "))
+        
+        # Validate that the user input is greater than or equal to 20
+        if user_number >= 20:
+            print(f"Your number {user_number} is a valid Integer 20 or greater. Thanks")
+            break  # Exit the loop if the input is valid
+        else:
+            print("Please enter a number greater than or equal to 20.")
+    except ValueError:
+        print("Invalid input! Please enter a valid number.")
+
+# Set the initial count variable to 0
+count = 0
+
+# Print initial message
+print("\nStarting While Loop - Print Count Variable")
+print(f"The user input started as {user_number}")
+
+# While loop: divide the number by 2 until it is less than or equal to 1
+while user_number > 1:
+    user_number /= 2  # Divide the user number by 2
+    count += 1  # Increase the count by 1
+    print(f"The current value of the user input after some math is {user_number}")
+    print(f"The while loop has looped {count} time{'s' if count > 1 else ''}")
+
+# Print final message
+print("\nEnding While Loop")
+print(f"The While Loop, looped a total of {count} times")
+print("\nEnding Code Challenge")
