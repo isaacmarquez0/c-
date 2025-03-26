@@ -1,0 +1,55 @@
+# Create the makey_bot dictionary
+makey_bot = {
+    'wave_pattern': [0, 1, 45, 0.5, 0, 1],
+    'eyes_rgb_status': 1,
+    'rgb_eye_color_1': '#FF5733',   # orange-red color
+    'rgb_eye_color_2': '#33C1FF',   # sky blue color
+    '7seg_value': 5,
+    'led_1_status': 1,
+    'led_1_blink': 0.5,
+    'led_2_status': 0,
+    'led_2_blink': 1.0,
+    'led_3_status': 1,
+    'led_3_blink': 0.75
+}
+
+# Print the dictionary
+print("\nMakey Bot Dictionary:")
+for key, value in makey_bot.items():
+    print(f"{key}: {value}")
+
+# Ask the user for a key
+user_key = input("\nEnter a key to check its value: ")
+
+# Check if the key exists
+if user_key in makey_bot:
+    print(f"Value for '{user_key}': {makey_bot[user_key]}")
+else:
+    print(f"'{user_key}' is not a valid key in the dictionary.")
+
+# Extra Credit - Update the dictionary
+update_key = input("\nEnter a key you want to update: ")
+
+if update_key in makey_bot:
+    new_value = input(f"Enter the new value for '{update_key}': ")
+    # Try to convert numeric values if possible
+    try:
+        # Convert string representations of numbers or lists if needed
+        if new_value.startswith('[') and new_value.endswith(']'):
+            # Convert to list
+            makey_bot[update_key] = eval(new_value)
+        elif '.' in new_value:
+            makey_bot[update_key] = float(new_value)
+        else:
+            makey_bot[update_key] = int(new_value)
+    except:
+        # If conversion fails, store as string
+        makey_bot[update_key] = new_value
+    print(f"Updated '{update_key}' to {makey_bot[update_key]}")
+else:
+    print(f"'{update_key}' is not a valid key in the dictionary.")
+
+# Final Dictionary Output
+print("\nFinal Makey Bot Dictionary:")
+for key, value in makey_bot.items():
+    print(f"{key}: {value}")
