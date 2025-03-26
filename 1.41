@@ -1,0 +1,19 @@
+# Step 1: Use the sort() method
+my_list = ["H", "e", "l", "l", "o", " ", "W", "o", "r", "l", "d"]
+my_list.sort()  # Sorts the list alphabetically
+print("After sort:", my_list)  # Print the sorted list
+
+# Step 2: Use the pop() method
+my_list = ["STEAM", "Clown", "Productions"]
+my_list.pop()  # Removes and returns the last item ("Productions")
+print("After pop:", my_list)  # Print the list after popping
+
+# Step 3: Use del to delete an object at my_list[1]
+my_list = ["apple", "orange", "pomegranate", "pineapple"]
+del my_list[1]  # Deletes the item at index 1 ("orange")
+print("After del:", my_list)  # Print the list after deletion
+
+# Step 4: Use remove() to remove an item
+my_list = ["Centauri", "Minbari", "Narn", "Human", "Shadow", "Vorlon"]
+my_list.remove("Shadow")  # Removes the first occurrence of "Shadow"
+print("After remove:", my_list)  # Print the list after removal
