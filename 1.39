@@ -1,0 +1,16 @@
+# Initialize the Fibonacci sequence with the first two numbers
+fibonacci_sequence = [0, 1]
+
+# Append 10 more Fibonacci numbers using a for loop (do not start at 0)
+for _ in range(10):
+    fibonacci_sequence.append(fibonacci_sequence[-2] + fibonacci_sequence[-1])
+
+print(fibonacci_sequence)  # Print the Fibonacci sequence after appending 10 numbers
+
+# Extend 10 more Fibonacci numbers using another for loop (starting from where the last one left off)
+new_fibonacci_numbers = []
+for _ in range(10):
+    new_fibonacci_numbers.append(fibonacci_sequence[-2] + fibonacci_sequence[-1])
+    fibonacci_sequence.append(fibonacci_sequence[-2] + fibonacci_sequence[-1])
+
+print(fibonacci_sequence)  # Print the Fibonacci sequence after extending 10 more numbers
