@@ -1,0 +1,39 @@
+# abs() function - Absolute value
+x = (4 + 5) * -7
+print("abs():", abs(x))  # Returns the absolute value of x
+
+# bin() function - Convert a decimal number to binary
+decimal_number = 12
+binary_value = bin(decimal_number)
+print(f"bin(): Decimal {decimal_number} in binary is {binary_value}")
+
+# hex() function - Convert a decimal number to hexadecimal
+hex_value = hex(decimal_number)
+print(f"hex(): Decimal {decimal_number} in hexadecimal is {hex_value}")
+
+# chr() function - Convert a Unicode value to its corresponding character
+unicode_value = 65  # Unicode for 'A'
+character = chr(unicode_value)
+print(f"chr(): The character for Unicode value {unicode_value} is {character}")
+
+# round() function - Round a floating-point number to a specific number of decimal places
+floating_point_value = 7.45789
+rounded_value = round(floating_point_value, 2)  # Round to 2 decimal places
+print(f"round(): Rounded value of {floating_point_value} to 2 decimal places is {rounded_value}")
+
+# Additional Functions:
+
+# len() function - Get the length of a string
+string_value = "Hello, World!"
+length_of_string = len(string_value)
+print(f"len(): The length of the string '{string_value}' is {length_of_string}")
+
+# sum() function - Sum up all elements in a list
+numbers = [1, 2, 3, 4, 5]
+sum_of_numbers = sum(numbers)
+print(f"sum(): The sum of {numbers} is {sum_of_numbers}")
+
+# sorted() function - Sort a list
+unsorted_list = [7, 3, 1, 5, 9]
+sorted_list = sorted(unsorted_list)
+print(f"sorted(): The sorted list of {unsorted_list} is {sorted_list}")
