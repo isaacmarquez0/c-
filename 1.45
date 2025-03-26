@@ -1,0 +1,13 @@
+# Starting the code
+print("Starting While Loop - Print Count Variable")
+
+# Initialize counter variable
+counter = 0
+
+# While loop runs while the counter is less than 10
+while counter < 10:
+    print(counter)
+    counter += 1  # Increment the counter by 1 each time
+
+# Ending the loop
+print("Ending While Loop")
