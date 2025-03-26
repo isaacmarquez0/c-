@@ -1,0 +1,29 @@
+# Initialize the Fibonacci sequence with the first two numbers
+fibonacci_sequence = [0, 1]
+
+# Calculate the next Fibonacci number and append it to the list
+fibonacci_sequence.append(fibonacci_sequence[0] + fibonacci_sequence[1])
+print(fibonacci_sequence)  # This will print [0, 1, 1]
+
+# Calculate the next Fibonacci number using the last two elements and append it to the list
+fibonacci_sequence.append(fibonacci_sequence[1] + fibonacci_sequence[2])
+print(fibonacci_sequence)  # This will print [0, 1, 1, 2]
+
+# If you want to continue appending numbers to the list, you can do it in a loop
+for _ in range(7):  # Add the next 7 Fibonacci numbers
+    fibonacci_sequence.append(fibonacci_sequence[-2] + fibonacci_sequence[-1])
+
+print(fibonacci_sequence)  # This will print the first 10 Fibonacci numbers
+
+# Now let's explore using .extend and concatenation:
+
+# Using extend() to add a list of new Fibonacci numbers
+new_fibonacci_numbers = [fibonacci_sequence[-2] + fibonacci_sequence[-1], 
+                         fibonacci_sequence[-1] + fibonacci_sequence[-2]]
+fibonacci_sequence.extend(new_fibonacci_numbers)
+print(fibonacci_sequence)  # This will add the next two Fibonacci numbers to the sequence
+
+# Using concatenation to add numbers to the sequence
+fibonacci_sequence += [fibonacci_sequence[-2] + fibonacci_sequence[-1]]
+print(fibonacci_sequence)  # This will add the next Fibonacci number
+
