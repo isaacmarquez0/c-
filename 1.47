@@ -1,0 +1,27 @@
+# Challenge #1 - Using ord() and chr()
+
+# Function to calculate resistance using Ohm's law
+def calculate_resistor(volts, current):
+    # Ohm's law: R = V / I
+    resistance = volts / current
+    return resistance
+
+# Find the hex value for the 'Ω' symbol using ord()
+ohm_symbol = 'Ω'
+unicode_value = ord(ohm_symbol)
+print(f"The Unicode value for the 'Ω' symbol is: {hex(unicode_value)}")
+
+# Ohm's law example: Calculate resistance for 5 volts and 20mA (0.02 A)
+volts = 5  # voltage in volts
+current = 0.02  # current in amperes (20mA = 0.02A)
+resistance = calculate_resistor(volts, current)
+print(f"A circuit with a voltage of {volts}v and a current of {current*1000}mA will require a resistor of {resistance}{chr(unicode_value)}")
+
+# Now, let's ask the user for voltage and current values
+print("\nNow let's calculate the resistor value using Ohm's law.")
+volts_input = float(input("Enter the voltage (in volts): "))
+current_input = float(input("Enter the current (in milliamps): ")) / 1000  # Convert to amperes
+
+# Calculate resistance with user input
+resistance_input = calculate_resistor(volts_input, current_input)
+print(f"A circuit with a voltage of {volts_input}v and a current of {current_input*1000}mA will require a resistor of {resistance_input}{chr(unicode_value)}")
