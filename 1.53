@@ -1,0 +1,41 @@
+print("""
+This Lab is about opening a file handle, reading 
+the file, printing line by line, and stripping the 
+extra '\\n' at the end of each line.
+""")
+
+# Challenges
+print("""
+Challenge #1
+----------------------------------------------------
+1 - Edit the code below to not print the extra "\\n" on each line.
+    Hint: Use a string method that will "strip" a character.
+    - https://www.w3schools.com/python/python_strings_methods.asp
+
+2 - Edit the code below to open the text-file-mail-very-short.txt file.
+---
+""")
+'text-file-matrix.txt'
+# Answer Section
+print("Answer to Challenges")
+print("-------------------------------------------------")
+
+# Open the correct file using a context manager
+filename = "text-file-mail-very-short.txt"
+
+try:
+    with open(filename, 'r') as fhand:
+        for line in fhand:
+            print(line.strip())  # Removes extra whitespace including newline
+    print("Done")
+except FileNotFoundError:
+    print(f"Error: The file '{filename}' was not found.")
+except Exception as e:
+    print(f"An unexpected error occurred: {e}")
+
+print("-------------------------------------------------")
+
+xfile = open('text-file-matrix.txt')
+whale = xfile.read()
+print(len(whale))
+print(whale[80:89])
