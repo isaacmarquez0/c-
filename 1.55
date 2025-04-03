@@ -1,0 +1,64 @@
+print('''
+Use String Methods to find information in the file:
+
+  1) Find all the lines that start with "From:"
+  2) Find all the lines that start with "To:"
+  3) Find all the lines containing an email address.
+     - Hint: Split the line into words and look for '@'.
+  4) Find the oldest "Date" in the file.
+     - Hint: Similar approach as #3.
+''')
+
+# Open the file correctly
+filename = "text-file-mail-long.txt"
+
+try:
+    with open(filename, 'r') as xfile:
+        lines = xfile.readlines()  # Read all lines into a list
+
+    # Finding required information
+    email_lines = []
+    date_lines = []
+    from_lines = []
+    to_lines = []
+
+    for line in lines:
+        line = line.strip()  # Remove trailing whitespace
+
+        # Find lines starting with "From:" and "To:"
+        if line.startswith("From:"):
+            from_lines.append(line)
+        if line.startswith("To:"):
+            to_lines.append(line)
+
+        # Find lines containing an email address (look for '@')
+        words = line.split()
+        for word in words:
+            if "@" in word and "." in word:  # A simple email detection
+                email_lines.append(word)
+
+        # Find lines containing dates
+        if line.startswith("Date:"):
+            date_lines.append(line)
+
+    # Display results
+    print("\nLines that start with 'From:':")
+    print("\n".join(from_lines) if from_lines else "No 'From:' lines found.")
+
+    print("\nLines that start with 'To:':")
+    print("\n".join(to_lines) if to_lines else "No 'To:' lines found.")
+
+    print("\nExtracted Email Addresses:")
+    print("\n".join(set(email_lines)) if email_lines else "No emails found.")
+
+    # Find the oldest date (lexicographically first date)
+    if date_lines:
+        oldest_date = min(date_lines)  # Sort dates (this works if they are in YYYY-MM-DD format)
+        print("\nOldest Date Found:", oldest_date)
+    else:
+        print("\nNo date lines found.")
+
+except FileNotFoundError:
+    print(f"Error: The file '{filename}' was not found.")
+except Exception as e:
+    print(f"An error occurred: {e}")
